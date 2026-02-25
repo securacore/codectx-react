@@ -69,4 +69,4 @@ When to add internal structure to a component. This is not an arbitrary complexi
 
 </rules>
 
-The common thread: the component renders, hooks integrate. If something is not about rendering, it belongs in a hook. The hook provides a stable interface to the component. If the underlying integration changes, only the hook implementation changes. This is the same abstraction principle as the [Just operational directive](../just/README.md): the consumer interacts with a stable interface, and the implementation can change behind it.
+The common thread: the component renders, hooks integrate. If something is not about rendering, it belongs in a hook. The hook provides a stable interface to the component. If the underlying integration changes, only the hook implementation changes. The consumer interacts with a stable interface, and the implementation can change behind it.

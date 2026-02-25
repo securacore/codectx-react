@@ -1,6 +1,6 @@
 # React
 
-React component conventions for this repository. This directory covers component patterns, file organization, composability, state management, error handling, and performance. Framework-specific concerns (RSC boundaries, routing, server actions) are in [docs/topics/nextjs/](../nextjs/README.md). Type system foundations are in [docs/topics/typescript/README.md](../typescript/README.md).
+React component conventions for this repository. This directory covers component patterns, file organization, composability, state management, error handling, and performance.
 
 For the reasoning behind these conventions, see [spec/README.md](spec/README.md).
 

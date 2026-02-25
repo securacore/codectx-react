@@ -153,4 +153,3 @@ const UserMenu: FC<Props> = () => {
 2. **Jotai.** Use atoms for shared state that multiple components need with granular re-render control.
 3. **React Context.** Use for subtree-scoped state where broad re-rendering on change is the correct behavior.
 4. **Composition.** Pass components as children instead of passing data through layers.
-5. **Server Components.** Fetch data where it is needed rather than passing it down from a parent.

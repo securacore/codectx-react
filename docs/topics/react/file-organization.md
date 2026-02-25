@@ -88,7 +88,7 @@ Card/
 - Leaf barrels re-export the single named export of their unit. `Button/index.ts` exports `{ Button }`.
 - Internal organizational barrels (`components/index.ts`, `hooks/index.ts`, `lib/index.ts`) re-export all their contents as named exports. Everything they expose is consumed by the parent component, so tree-shaking yields the same result.
 - The component's top-level barrel (`Card/index.ts`) exports only the assembled component (single named export). This is the public API.
-- `src/`-level broad barrels remain prohibited per [TypeScript conventions](../typescript/README.md).
+- `src/`-level broad barrels remain prohibited.
 - Colocated hooks and utilities are private to the component. They are not re-exported through the component's top-level barrel.
 
 </rules>
@@ -110,7 +110,7 @@ export { Header } from "./components";   // WRONG: sub-component exposed directl
 
 // Incorrect: broad barrel at src/ level
 // src/components/index.ts
-export { Button } from "./Button";       // WRONG: prohibited per TypeScript conventions
+export { Button } from "./Button";       // WRONG: prohibited
 export { Card } from "./Card";
 ```
 
@@ -123,7 +123,7 @@ The `src/` directory uses the same one-concern-per-directory principle at the to
 - `src/components/` contains shared React components only. No hooks, utilities, or other concerns.
 - `src/hooks/` contains shared hooks only. No components or utilities.
 - `src/lib/` contains shared utility functions only.
-- `src/types/` contains domain types only (see [TypeScript conventions](../typescript/README.md)).
+- `src/types/` contains domain types only.
 - `src/providers/` contains shared provider components only.
 - `src/features/` contains global features: domain modules that are not tied to any specific route. Each feature has its own recursive internal structure (`components/`, `hooks/`, `lib/`, `providers/`, `actions/`).
 - No cross-pollination. `src/components/hooks/` does not exist. A hook either lives inside a component's recursive structure (private to that component) or in `src/hooks/` (globally shared).
@@ -195,5 +195,3 @@ import { notify } from "@/features/notifications";
 import { NotificationBanner } from "@/features/notifications/components/NotificationBanner";
 // WRONG: bypasses the feature's barrel, couples to internal structure
 ```
-
-For how this pattern applies to route-level organization in the Next.js App Router, see [docs/topics/nextjs/colocation.md](../nextjs/colocation.md).

@@ -9,7 +9,6 @@ Component definition conventions and props patterns. For composable (namespaced)
 - Use arrow function syntax. Do not use the `function` keyword for components.
 - Annotate every component with `FC<Props>`. The `FC` type is globally available. Do not import it from React.
 - Use named exports. Do not use default exports.
-- **Exception:** Next.js routing files (`page.tsx`, `layout.tsx`, etc.) use `function` with default exports as required by the framework.
 
 </rules>
 
@@ -82,4 +81,4 @@ type ButtonProps = { variant: string };
 
 </rules>
 
-For the full global types convention, see the Global Types section in [docs/topics/typescript/README.md](../typescript/README.md).
+
