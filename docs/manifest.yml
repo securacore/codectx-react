@@ -2,3 +2,16 @@ name: codectx-react
 author: ""
 version: 0.0.5
 description: Documentation package for codectx-react
+topics:
+    - id: react
+      path: topics/react/README.md
+      description: React
+      spec: topics/react/spec/README.md
+      files:
+        - topics/react/components.md
+        - topics/react/composable-components.md
+        - topics/react/error-handling.md
+        - topics/react/file-organization.md
+        - topics/react/hooks.md
+        - topics/react/memoization.md
+        - topics/react/state.md
